@@ -18,7 +18,7 @@
     <header class="v-aligne">
         <div class="conteneur flex space-between">
             <section>
-                <h1 class="titre-principal"><?php bloginfo( 'title' ) ?></h1>
+                <h1 class="titre-principal"><a href="<?php echo esc_url( home_url( '/' ) )?>"><?php bloginfo( 'title' ) ?></a></h1>
                 <div class="slogan"><?php bloginfo( 'description' ) ?></div>
             </section>
             <nav class="flex v-aligne">
@@ -32,9 +32,6 @@
             wp_nav_menu($args);
 
             ?> 
-              
-              
-              
               
                <!--
                 <ul class="menu">
