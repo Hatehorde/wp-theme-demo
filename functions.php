@@ -37,3 +37,30 @@ function simplenews_register_menus(){
 }
 
 add_action('after_setup_theme', 'simplenews_register_menus');
+
+// Utiliser les Widgets
+function simplenews_widget_init($id){
+
+    register_sidebar( array(
+
+        'name' => 'widget 1',
+        'id' => 'widget-1',
+        'description' => 'widget affiché en haut du sidebar',
+        'before_widget' => '<div class="side-widget">',
+        'after_widget' => '</div>'
+
+    ) );
+
+    register_sidebar( array(
+
+        'name' => 'widget 2',
+        'id' => 'widget-2',
+        'description' => 'widget affiché en bas du sidebar',
+        'before_widget' => '<div class="side-widget">',
+        'after_widget' => '</div>'
+
+    ) );
+
+}
+
+add_action('widgets_init', 'simplenews_widget_init');
